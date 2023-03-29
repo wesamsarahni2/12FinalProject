@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SettingsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="About"
+            app:layout_constraintBottom_toTopOf="@+id/imgBtnLogOut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="502dp"
+            android:text="Add Product"
+            app:layout_constraintBottom_toTopOf="@+id/btnAbout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgBtnLogOut"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/common_full_open_on_phone"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/btmNavSettings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAbout" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btmNavSettings"
+            app:menu="@menu/bottom_nav_menu"
+            android:layout_width="411dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBtnLogOut">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutAdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etProductNameAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="42dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Product Name"
+            app:layout_constraintBottom_toBottomOf="@+id/etCompanyNameAdd"
+            app:layout_constraintStart_toStartOf="@+id/etDescriptionAdd" />
+
+        <ImageView
+            android:id="@+id/imgLogoAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="123dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="385dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginBottom="149dp"
+            android:text="Name"
+            app:layout_constraintBottom_toTopOf="@+id/etCompanyNameAdd"
+            app:layout_constraintStart_toStartOf="@+id/imgLogoAdd"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogoAdd" />
+
+        <Spinner
+            android:id="@+id/SpinnerAvaliblity"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="263dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/etDescriptionAdd"
+            app:layout_constraintStart_toStartOf="@+id/etDescriptionAdd"
+            app:layout_constraintTop_toBottomOf="@+id/etDescriptionAdd"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/etCompanyNameAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Company Name"
+            app:layout_constraintBottom_toTopOf="@+id/etDescriptionAdd"
+            app:layout_constraintStart_toStartOf="@+id/etProductNameAdd"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/etDescriptionAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="79dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="Additional Description"
+            app:layout_constraintBottom_toTopOf="@+id/SpinnerAvaliblity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCompanyNameAdd" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="160dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="162dp"
+            android:text="Add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogoAdd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
